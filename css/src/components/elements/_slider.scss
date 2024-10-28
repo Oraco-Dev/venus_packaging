@@ -1,0 +1,62 @@
+.splide__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 300ms ease;
+  max-width: 100%; /* Set the maximum width of the slide to fit within the viewport */
+  overflow: hidden; /* Hide any content that overflows the slide */
+
+  &-logo {
+    width: 100%;
+    max-width: 240px;
+  }
+}
+
+.splide__slide:not(.is-visible) {
+  opacity: 50%;
+}
+
+.slider-buttons {
+  display: flex;
+  gap: 20px;
+
+  button {
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__next {
+    height: 40px;
+    width: 40px;
+  }
+
+  &__prev {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.splide__arrow--next, .splide__arrow--prev {
+  height: 40px !important;
+  width: 40px !important;
+  opacity: 1 !important;
+  background-color: $light-blue;
+}
+
+.splide__arrow--next {
+  right: 1em !important;
+
+  @include media(">=tablet") {
+    right: -2em !important;
+  }
+}
+
+.splide__arrow--prev {
+  left: 1em !important;
+
+  @include media(">=tablet") {
+    left: -2em !important;
+  }
+}

@@ -1,0 +1,39 @@
+.blog_inner-pagination, .product__grid-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   margin: 20px 0px;
+ 
+}
+
+a.page-numbers {
+    color: black;
+    font-family: "Manrope";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 20px;
+ 
+}
+
+.page-numbers.current {
+    color: black;
+    font-family: "Manrope";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+  margin-left: 2px;
+  margin-right: 2px;
+  background-color: $light-blue;
+  margin-top: 20px;
+  padding: 5px 13px;
+  border-radius: 16px;
+}
+
+.page-numbers.dots {
+  font-size: 20px;
+  margin-top: 20px;
+}

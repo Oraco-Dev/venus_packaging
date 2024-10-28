@@ -1,0 +1,39 @@
+.single {
+  &__banner {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+
+    &-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &-meta {
+      background-color: white;
+      margin-left: 2%;
+      padding: 1%;
+      position: relative;
+      z-index: 100;
+    }
+  }
+
+  &__content {
+    height: 50vh;
+    background-color: $light-peach;
+    padding: 3%;
+
+    &-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 20px;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.gform-theme--foundation .gform_fields {
+  grid-row-gap: 16px !important;
+}
+
+.gform_button {
+  width: 250px !important;
+  padding: 14px 24px !important;
+  background-color: $orange !important;
+  font-size: 16px !important;
+  font-family: $Jakarta !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  border-radius: 24px !important;
+}
+
+.gform-body {
+  input, select, textarea {
+    border-radius: 30px !important;
+    // padding: 20px !important;
+    border: none !important;
+  }
+}
+
+.gform-theme--foundation .gfield textarea.large {
+  min-block-size: 0.5rem !important;
+  height: 100px !important;
+}
+
+// REVIEW WIDGET FORMS
+
+.rplg .rplg-form {
+  z-index: 214748300011111 !important;
+}
+
+.rplg-badge2 .rplg-badge2-btn {
+  display: none !important;
+
+  @include media(">=tablet") {
+    display: flex !important;
+  }
+}
+
+#gform_2 {
+  display: flex !important;
+  flex-direction: column;
+
+  input {
+    padding: 24px;
+  }
+  
+  .gform_body {
+    flex: 1;
+  }
+
+  @include media(">=tablet") {
+    flex-direction: row;
+    align-items: center !important;
+
+    .gform_footer {
+      padding-top: 0px !important;
+    }
+  }
+}
+
+#gform_wrapper_2 {
+  flex: 1;
+}
+
+.gform_confirmation_message {
+  font-size: 24px;
+  font-family: "Manrope";
+  font-weight: bold;
+}
+
+.gform_footer {
+  padding-top: 10px !important;
+  margin-top: 0px !important;
+}
+
+#gform_submit_button_2 {
+  margin-left: 10px !important;
+}

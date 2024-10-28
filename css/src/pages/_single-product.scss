@@ -1,0 +1,462 @@
+.product-page {
+  min-height: 100vh;
+  background-color: $light-blue-20;
+  margin-top: 150px !important;
+
+  &-video {
+
+    &__overlay {
+      visibility: hidden;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* semi-transparent black overlay */
+      z-index: -1000; /* place it behind the modal */
+      opacity: 0;
+      animation: fadeOutOverlay 0.2s ease-in-out forwards;
+  
+      &.active {
+        visibility: visible;
+        z-index: 10005;
+        animation: fadeInOverlay 0.5s ease-in-out forwards;
+      }
+    }
+  
+    &__modal {
+      visibility: hidden;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      height: fit-content;
+      max-height: 90vh;
+      overflow: scroll;
+      background-color: $light-blue;
+      border-radius: 32px;
+      padding: 20px;
+      z-index: 100002;
+      opacity: 0;
+      animation: scaleOut 0.2s ease-in-out forwards; 
+      
+     
+  
+      &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 20px;
+      }
+  
+      &.active {
+        visibility: visible;
+        animation: scaleIn 0.5s ease-in-out forwards;
+      }
+  
+      @include media(">=desktop") {
+        padding: 40px;
+        width: 50%;
+        max-width: 800px;
+      }
+    }
+
+  }
+
+  &__overlay {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* semi-transparent black overlay */
+    z-index: -1000; /* place it behind the modal */
+    opacity: 0;
+    animation: fadeOutOverlay 0.2s ease-in-out forwards;
+
+    &.active {
+      visibility: visible;
+      z-index: 10005;
+      animation: fadeInOverlay 0.5s ease-in-out forwards;
+    }
+  }
+
+  &__modal {
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: fit-content;
+    max-height: 90vh;
+    overflow: scroll;
+    background-color: $light-blue;
+    border-radius: 32px;
+    padding: 20px;
+    z-index: 100002;
+    opacity: 0;
+    animation: scaleOut 0.2s ease-in-out forwards; 
+    
+   
+
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 20px;
+    }
+
+    &.active {
+      visibility: visible;
+      animation: scaleIn 0.5s ease-in-out forwards;
+    }
+
+    @include media(">=desktop") {
+      padding: 40px;
+      width: 50%;
+      max-width: 800px;
+    }
+  }
+
+  &__header {
+    padding: 20px 0px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @include media(">=tablet") {
+      flex-direction: row;
+    }
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+
+      @include media(">=tablet") {
+        width: 40%;
+      }
+
+      @include media(">=desktop") {
+        width: 35%;
+      }
+
+      &-img {
+        width: 100%;
+        height: auto;
+        border-radius: 30px;
+      }
+
+      &-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 30px;
+        }
+      }
+    }
+
+    &-right {
+      width: 100%;
+      background-color: white;
+      border-radius: 30px;
+      padding: 40px;
+      height: fit-content;
+      // position: sticky;
+      // top:180px;
+
+      &-links {
+        display: flex; 
+        flex-direction: column;
+        gap:20px;
+
+        @include media(">=desktop") {
+          flex-direction: row;
+          align-items: center; 
+          justify-content: flex-start; 
+        }
+      }
+
+      &-logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        &-img {
+          width: 100%;
+          max-width: 100px;
+          height: auto;
+        }
+
+        &-badges {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          flex-wrap: wrap;
+          gap: 10px;
+          width: 100%;
+       
+
+          img {
+            width: 150px;
+            height: auto;
+          }
+          
+          &-badge {
+            padding: 4px 24px;
+            border-radius: 20px;
+
+            &.low {
+              background-color: $light-blue-20;
+            }
+
+            &.sale {
+              background-color: $orange;
+
+              h5 
+              {
+                color: white;
+              }
+            }
+
+            &.eco {
+              background-color: #006536;
+              
+              h5 {
+                color: white !important;
+              }
+            }
+
+            &.new {
+              background-color: $light-blue;
+              
+              h5 {
+                color: $navy-blue !important;
+              }
+            }
+
+            &.featured {
+              background-color: $navy-blue;
+              
+              h5 {
+                color: white !important;
+              }
+            }
+          }
+        }
+
+      }
+
+      @include media(">=tablet") {
+        width: 50%;
+      }
+
+      @include media(">=desktop") {
+        width: 60%;
+      }
+
+      h1 {
+        font-family: "Manrope";
+        font-size: 38px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 58px;
+        letter-spacing: 2%;
+          color: $navy-blue;
+      }
+
+      h4 {
+        padding-bottom: 20px;
+      }
+
+      li {
+        color: $navy-blue;
+        font-size: 16px;
+      }
+
+      &-hr {
+        background-color: #ebebeb;
+        height: 1px;
+        margin: 20px 0px;
+      }
+    }
+  }
+
+  &__accordion {
+    background-color: white;
+    margin-top: 100px;
+    padding: 40px;
+    border-radius: 30px;
+  }
+
+  &__related {
+    margin-top: 100px;
+    padding-bottom: 100px;
+
+    h3 {
+      padding-bottom: 50px;
+    }
+
+    &-products {
+      display: grid;
+      gap:20px;
+      grid-template-columns: repeat(1, 1fr);
+
+      @include media(">=tablet") {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @include media(">=desktop") {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+}
+
+.woocommerce-Price-amount {
+    font-family: "Manrope";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+}
+
+.woocommerce-variation-add-to-cart {
+ margin-top:50px;
+}
+
+.woocommerce-variation-add-to-cart input {
+ width: 100%;
+ padding: 20px;
+ border-radius: 4px;
+ background-color: $light-blue-20;
+ border: 1px solid #ebebeb;
+}
+
+.woocommerce-variation-add-to-cart button {
+   margin-top:20px;
+   background-color: $orange;
+   color: white;
+   }
+
+/* Hide the default WooCommerce quantity label */
+.woocommerce-variation-add-to-cart .quantity label {
+    display: none;
+}
+
+/* Create a pseudo-label using CSS */
+.woocommerce-variation-add-to-cart .quantity:before {
+    content: "Quantity";
+    display: block;
+    font-family: "Manrope";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 28px;
+}
+
+/* Adjust the positioning to align the pseudo-label */
+.woocommerce-variation-add-to-cart .quantity {
+    position: relative;
+}
+
+.woocommerce-variation-add-to-cart .quantity:before {
+    position: absolute;
+    top: -40px; /* Adjust as necessary */
+    left: 0;
+}
+
+/* Styling the select element */
+.variations_form select {
+    /* Your styles here */
+    width: 100%;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: $light-blue-20;
+    border: 1px solid #ebebeb;
+
+}
+
+/* Styling the options within the select */
+.variations_form select option {
+    /* Your styles here */
+    padding: 5px;
+}
+
+/* Styling the table container */
+.variations_form {
+    /* Your styles here */
+    margin-top: 20px;
+}
+
+/* Styling the table */
+.variations_form table {
+    /* Your styles here */
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Styling table headers */
+.variations_form th {
+    /* Your styles here */
+    text-align: left;
+}
+
+/* Styling table cells */
+.variations_form td {
+    /* Your styles here */
+    padding: 10px;
+}
+
+.variations_form label {
+    font-family: "Manrope";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 28px;
+}
+
+.reset_variations {
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  display: none;
+}
+
+.out-of-stock {
+  display: none;
+}
+
+// NEW
+
+.normal-product-quantity {
+  display: block;
+    font-family: "Manrope";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 28px;
+    margin-top: 20px;
+}
+
+.input-text.qty {
+  width: 100%;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: rgba(146, 191, 248, 0.2);
+  border: 1px solid #ebebeb;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}

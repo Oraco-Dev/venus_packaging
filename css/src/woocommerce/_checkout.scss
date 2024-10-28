@@ -1,0 +1,90 @@
+.wc-block-checkout {
+    padding: 150px 2.5% 0px 2.5%;
+    background-color: $light-blue-20;
+  
+    @include media(">=desktop") {
+        margin-top: 170px !important;
+        padding: 4%;
+    }
+  
+    input,
+    textarea,
+    select {
+      border: 1px solid #ebebeb !important;
+      outline: none !important;
+      border-radius: 4px !important;
+      font-family: 'manrope' !important;
+      font-size: 20px !important;
+    }
+  
+    label {
+      font-family: 'manrope';
+    }
+
+    p, span {
+      font-size: 14px;
+    }
+  }
+  
+  .wc-block-components-form .wc-block-components-text-input label,
+  .wc-block-components-text-input label {
+    font-family: 'manrope' !important;
+  }
+  
+  .wc-block-components-checkout-step__title {
+    font-size: 24px !important;
+  }
+  
+  .wc-block-components-checkbox__label,
+  .wc-block-checkout__terms span,
+  .wc-block-components-order-summary__button-text {
+    font-family: 'manrope';
+    font-size: 16px;
+  }
+  
+  .wc-block-components-checkout-place-order-button {
+    font-family: 'manrope' !important;
+    margin-top: 20px !important;
+    font-size: 20px !important;
+    background-color: $light-blue !important;
+    padding: 16px 32px !important;
+    color: $navy-blue !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    outline: none !important;
+    border: none !important;
+    border-radius: 20px 20px 20px 0px !important;
+  }
+  
+  .wp-block-woocommerce-checkout-order-summary-block {
+    position: sticky;
+    top: 20%;
+  
+    span {
+      font-family: 'manrope' !important;
+      font-size: 16px !important;
+      font-weight: bold !important;
+  
+      &.wc-block-formatted-money-amount {
+        font-size: 28px !important;
+      }
+    }
+  }
+  
+  .wc-block-components-checkbox__input {
+    font-size: 80px !important;
+  }
+  
+  .wc-block-components-checkbox .wc-block-components-checkbox__mark {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+  
+  #wc-stripe-card-number-element {
+      padding: 32px;
+  }
+  
+  .wc-block-components-sidebar-layout {
+    margin: 0 auto 0px !important;
+    padding-bottom: 80px !important;
+  }

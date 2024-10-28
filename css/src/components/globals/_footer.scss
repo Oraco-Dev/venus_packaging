@@ -1,0 +1,294 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  overflow: hidden;
+
+  &__top {
+    padding: 50px 0px;
+    background-color: $light-blue;
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @include media(">=tablet") {
+        flex-direction: row;
+        gap: 50px;
+      }
+
+      &-left {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+
+        @include media(">=tablet") {
+          width: 35%;
+        }
+      }
+
+      &-right {
+        flex: 1;
+
+        @include media(">=desktop") {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  &__middle {
+    padding: 100px 0px 0px 0px;
+    background-color: $navy-blue;
+    position: relative;
+    overflow: hidden;
+
+    &-watermark {
+      position: absolute;
+      right: -10%;
+      top: -10%;
+    }
+
+    &-top {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      padding-bottom: 50px;
+
+      span {
+        padding-bottom: 10px;
+      }
+
+      @include media(">=tablet") {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @include media(">=desktop") {
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      &.one,
+      &.two,
+      &.three,
+      &.four,
+      &.five {
+        h5 {
+          color: white;
+          font-weight: bold;
+          margin-bottom: 20px;
+        }
+        p {
+          color: white;
+        }
+      }
+
+      &.two,
+      &.three,
+      &.four,
+      &.five {
+        display: flex;
+        flex-direction: column;
+
+        @include media(">=tablet") {
+          margin-left: 20px;
+          padding: 0px 20px;
+        }
+
+        a {
+          color: white;
+          font-weight: thin;
+        }
+      }
+
+      &-contact {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 5px;
+
+        a {
+          display: flex;
+          gap: 10px;
+          color: white;
+
+          span {
+            font-weight: bold;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    &-middle {
+      padding-bottom: 50px;
+
+      &.container {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      &-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        
+        justify-content: space-between;
+
+        @include media(">=tablet") {
+          flex-direction: row;
+          align-items: center;
+      
+        }
+
+        &-tel {
+          a {
+            color: $orange;
+            font-size: 32px;
+            font-weight: bold;
+            font-family: "Manrope";
+            margin-left: 10px;
+          }
+        }
+
+        &-socials {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          gap: 20px;
+
+          
+          @include media(">=tablet") {
+            flex-direction: row;
+            align-items: center;
+            gap: 50px;  
+            width: fit-content;
+            margin-right: 50px;
+          }
+
+      
+          &-icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+        }
+      }
+    }
+
+    &-bottom {
+      border-top: 1px solid #ebebeb4e;
+      padding: 50px 0px;
+
+      &-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        color: #ebebeba0;
+
+        @include media(">=desktop") {
+          flex-direction: row;
+          align-items: center;
+        }
+
+        &-left {
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+
+          @include media(">=tablet") {
+            flex-direction: row;
+            align-items: center;
+          }
+
+          &-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            @include media(">=desktop") {
+              flex-direction: row;
+              align-items: center;
+            }
+          }
+        }
+
+        &-right {
+          display: flex;
+          flex-direction: column;
+          margin-top: 20px;
+          width: 100%;
+          gap: 20px;
+
+          &-logoone {
+            width: 100px !important;
+          }
+
+          @include media(">=tablet") {
+            margin-top:0px;
+            flex-direction: row;
+            align-items: center;
+            width: fit-content;
+          }
+
+          span {
+            margin-right: 20px;
+          }
+
+          img {
+            width: 150px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+
+    &-logos {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      @include media(">=tablet") {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      img {
+        width: 120px;
+        height: auto;
+
+        @include media(">=tablet") {
+          height: 22.5px;
+          width: auto;
+        }
+      }
+    }
+
+    @include media(">=tablet") {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-bt {
+      cursor: pointer;
+
+      img {
+        height: 50px;
+      }
+    }
+  }
+}

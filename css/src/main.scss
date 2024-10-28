@@ -1,0 +1,49 @@
+// colors
+@import "./colors/colors";
+
+// fonts
+@import "./fonts/fonts";
+
+// helpers
+@import "./helpers/vars";
+@import "./helpers/mixins";
+@import "./helpers/breakpoints";
+@import "./helpers/container";
+
+// globals
+// @import "./components/globals/faq";
+@import "./components/globals/footer";
+@import "./components/globals/product-card";
+@import "./components/globals/mega-menu";
+@import "./components/globals/menu";
+@import "./components/globals/modal";
+
+// components
+@import "./components/elements/accordion";
+@import "./components/elements/blog-card";
+@import "./components/elements/buttons";
+@import "./components/elements/category-badge";
+@import "./components/elements/gform";
+@import "./components/elements/slider";
+@import "./components/elements/pagination";
+
+// layout & pages
+@import "./base";
+@import "./pages/front-page";
+@import "./pages/contact-page";
+@import "./pages/about-page";
+@import "./pages/news-page";
+@import "./pages/privacy-page";
+@import "./pages/terms-page";
+@import "./pages/search-page";
+@import "./pages/single-post";
+@import "./pages/blogs-page";
+@import "./pages/service-spare-parts-page";
+@import "./pages/404-page";
+@import "./pages/simplify-page";
+
+// woocommerce
+@import "./pages/single-product";
+@import "./pages/product-archive-page";
+@import "./woocommerce/cart";
+@import "./woocommerce/checkout";

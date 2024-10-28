@@ -1,0 +1,22 @@
+@import "./breakpoints";
+@import "./mixins";
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0px 16px;
+  max-width: 1600px;
+
+  @include media(">=tablet") {
+    padding: 0px 32px;
+  }
+
+  @include media(">=desktop") {
+    padding: 0px 48px;
+  }
+
+  &.full-width-mobile {
+    padding: 0px;
+  }
+}

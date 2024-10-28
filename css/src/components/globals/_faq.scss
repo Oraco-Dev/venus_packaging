@@ -1,0 +1,14 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5% 2rem;
+  background-color: $primary-peach;
+  height: fit-content;
+  width: 100%;
+
+  &-title {
+    padding-bottom: 50px;
+  }
+}

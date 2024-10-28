@@ -1,0 +1,36 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  outline: none;
+  border: none;
+  padding: 9px 18px;
+  font-family: "Manrope";
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 26px;
+  cursor: pointer;
+  border-radius: 0px 15px 15px 15px;
+  transition: 300ms all ease;
+
+  &.orange {
+    background-color: $orange;
+    color: white;
+
+    &:hover {
+      background-color: $dark-orange;
+    }
+  }
+
+
+  &.light-blue {
+    background-color: $light-blue;
+    color: $navy-blue;
+
+    &:hover {
+      background-color: $light-blue-dark;
+    }
+  }
+}

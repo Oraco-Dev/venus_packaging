@@ -1,0 +1,170 @@
+.wp-block-woocommerce-cart {
+    padding: 50px 7.5%;
+    background-color: $light-blue-20;
+    margin-top: 170px !important;
+    
+    @include media(">=desktop") {
+       padding: 50px 7.5%;
+    }
+  }
+  
+  .wc-block-cart-items__header {
+    span {
+      font-family: 'Manrope';
+      font-size: 16px;
+    }
+  }
+  
+
+  .wp-block-woocommerce-cart-order-summary-block {
+    span {
+      font-family: 'Manrope' !important;
+      font-size: 16px !important;
+      font-weight: bold !important;
+  
+      &.wc-block-formatted-money-amount {
+        font-size: 28px !important;
+      }
+    }
+  }
+  
+  .wc-block-components-product-name {
+    font-size: 24px !important;
+  }
+  
+  .wc-block-components-product-price {
+    padding-top: 10px !important;
+  }
+  
+  .wc-block-formatted-money-amount {
+    font-family: 'Manrope';
+    font-size: 16px;
+  }
+  
+  .wc-block-components-quantity-selector {
+    height: 50px;
+    width: 150px !important;
+  
+    &__button {
+      font-size: 20px !important;
+      width: 40% !important;
+    }
+  }
+  
+  .wc-block-cart-item__remove-link {
+    font-family: 'Manrope' !important;
+    margin-top: 20px !important;
+    font-size: 20px !important;
+    background-color: #f05a28 !important;
+    padding: 16px 32px !important;
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+  }
+  
+  .wc-block-cart__submit-button {
+    font-family: 'Manrope' !important;
+    margin-top: 20px !important;
+    font-size: 20px !important;
+    background-color: $light-blue !important;
+    padding: 16px 32px !important;
+    color: $navy-blue !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    border-radius: 20px 20px 20px 0px !important;
+  }
+  
+  .product-submit-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+  }
+
+  .wc-block-components-totals-shipping__options {
+    display: none !important;
+  }
+
+  // SHIPPING BLOCKS ON CART FORM
+
+  .wc-block-components-totals-item__description {
+    font-family: 'Manrope' !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+  }
+
+
+  .wc-block-components-text-input input[type=text] {
+    /* background-color: #fff; */
+    /* border: 1px solid hsla(0, 0%, 7%, .8); */
+    /* border-radius: 4px; */
+    /* box-sizing: border-box; */
+    /* color: #2b2d2f; */
+    /* font-family: inherit; */
+    /* font-size: 1em; */
+    /* line-height: 1em; */
+    /* margin: 0; */
+    /* min-height: 0; */
+    /* padding: 1em; */
+    width: 100% !important;
+    padding: 20px !important;
+    border: 1px solid black !important;
+    border: 1px solid #ebebeb !important;
+    outline: none !important;
+    border-radius: 4px !important;
+    font-family: "manrope" !important;
+    font-size: 20px !important;
+  }
+
+  .wc-block-components-combobox .wc-block-components-combobox-control input.components-combobox-control__input {
+    /* background: #fff; */
+    /* border: 1px solid #50575e; */
+    /* border-radius: 4px; */
+    /* box-shadow: none; */
+    /* box-sizing: border-box; */
+    /* color: #2b2d2f; */
+    /* font-family: inherit; */
+    /* font-size: inherit; */
+    /* font-size: 1em; */
+    /* font-style: inherit; */
+    /* font-weight: inherit; */
+    /* font-weight: 400; */
+    /* letter-spacing: inherit; */
+    /* line-height: inherit; */
+    /* line-height: 1em; */
+    /* opacity: 1; */
+    /* outline: inherit; */
+    /* padding: 1.5em .5em .5em; */
+    /* text-align: left; */
+    /* text-decoration: inherit; */
+    /* text-overflow: ellipsis; */
+    /* text-transform: inherit; */
+    /* text-transform: none; */
+    /* white-space: nowrap; */
+    /* width: 100%; */
+    padding: 20px !important;
+    border: 1px solid black !important;
+    border: 1px solid #ebebeb !important;
+    outline: none !important;
+    border-radius: 4px !important;
+    font-family: "manrope" !important;
+    font-size: 20px !important;
+  }
+
+
+  .wc-block-components-shipping-calculator-address__button {
+    font-family: "Manrope" !important;
+    margin-top: 20px !important;
+    font-size: 20px !important;
+    background-color: #92BFF8 !important;
+    padding: 16px 32px !important;
+    color: #181349 !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    border-radius: 20px 20px 20px 0px !important;
+    outline: none !important;
+    border: none !important;
+  }
+
+  .wc-block-components-button__text {
+    font-size: 20px !important;
+  }

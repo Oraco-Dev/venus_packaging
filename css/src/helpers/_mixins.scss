@@ -1,0 +1,14 @@
+@mixin fadeInUpEl($delayValue) {
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, transform;
+  transition-duration: 0.4s, 1.2s;
+  transition-delay: $delayValue + s;
+}
+
+@mixin fadeInUp() {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
